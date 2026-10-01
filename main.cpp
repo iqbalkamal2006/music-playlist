@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     float numGenre, numVibe, numActivity;
     cout << "======================================" << endl;
-    cout << "SPOTIFY MUSIC RECOMMENDATION PLAYLIST" << endl;
+    cout << "SPOTIFY MUSIC RECOMMENDATION ASSISTANT" << endl;
     cout << "======================================" << endl;
     cout << setw(2) << endl;
     cout << "Welcome listener! Give us your music preferences!" << endl;
@@ -337,5 +337,9 @@ int main(){
         cout <<"Everything In Its Right Place - Radiohead"<< endl;
         cout <<"Boulevard of Broken Dreams - Green Day"<< endl;
     }
+
+    cout << "ENJOY YOUR MUSIC!!!" << endl;
+    cout << "Thank you for using" << endl;
+
     return 0;
 }
