@@ -357,7 +357,7 @@ int main()
         cin >> numVibe;
     }
 
-    
+    // Activity
     activityMenu();
     cout << "Enter here: ";
     cin >> numActivity;
@@ -370,7 +370,7 @@ int main()
         cin >> numActivity;
     }
 
-    
+    // Recommendation
     recommendation(numGenre, numVibe, numActivity);
 
     
