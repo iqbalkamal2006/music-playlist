@@ -3,6 +3,7 @@
 using namespace std;
 
 
+// Displays the genre menu (Pop, Hip Hop, Rock) for the user to choose from
 void genreMenu()
 {
     cout << "What's your favourite genre?" << endl;
@@ -13,6 +14,7 @@ void genreMenu()
 }
 
 
+// Displays the vibe menu (Chill, Hype, Sad) for the user to choose from
 void vibeMenu()
 {
     cout << "What's your vibe?" << endl;
@@ -23,6 +25,7 @@ void vibeMenu()
 }
 
 
+// Displays the activity menu (Studying, Walking, Driving) for the user to choose from
 void activityMenu()
 {
     cout << "What are you doing now or what are you planning later?"<< endl;
@@ -34,6 +37,10 @@ void activityMenu()
 }
 
 
+// Prints the recommended playlist and tracks based on the user's genre, vibe and activity choices
+// numGenre: 1 = Pop, 2 = Hip Hop, 3 = Rock
+// numVibe: 1 = Chill, 2 = Hype, 3 = Sad
+// numActivity: 1 = Studying, 2 = Walking, 3 = Driving
 void recommendation(int numGenre, int numVibe, int numActivity)
 {
     cout << "======================================" << endl;
@@ -42,7 +49,9 @@ void recommendation(int numGenre, int numVibe, int numActivity)
     cout << endl;
     cout << "PLAYLIST:" << endl;
 
-    
+    // POP (numGenre == 1)
+    // Each condition below matches one vibe + activity combination for Pop
+    // Chill Pop
     if (numGenre == 1 && numVibe == 1 && numActivity == 1)
     {
         cout << "Let's go POPPY with your playlist!" << endl;
@@ -73,6 +82,7 @@ void recommendation(int numGenre, int numVibe, int numActivity)
         cout << "Heat Waves - Glass Animals" << endl;
     }
 
+    // Hype Pop
     else if (numGenre == 1 && numVibe == 2 && numActivity == 1)
     {
         cout << "Let's go POPPY with your playlist!" << endl;
@@ -103,6 +113,7 @@ void recommendation(int numGenre, int numVibe, int numActivity)
         cout << "Don't Start Now - Dua Lipa" << endl;
     }
 
+    // Sad Pop
     else if (numGenre == 1 && numVibe == 3 && numActivity == 1)
     {
         cout << "Let's go POPPY with your playlist!" << endl;
@@ -133,7 +144,6 @@ void recommendation(int numGenre, int numVibe, int numActivity)
         cout << "Save Your Tears - The Weeknd" << endl;
     }
 
-    // HIP HOP
     else if (numGenre == 2 && numVibe == 1 && numActivity == 1)
     {
         cout << "Improve your RAP game with your playlist!"<< endl;
@@ -224,7 +234,6 @@ void recommendation(int numGenre, int numVibe, int numActivity)
         cout << "Sing About Me, I'm Dying of Thirst - Kendrick Lamar" << endl;
     }
 
-    //ROCK
     else if (numGenre == 3 && numVibe == 1 && numActivity == 1)
     {
         cout << "Go full ROCK N ROLL for your playlist!"<< endl;
@@ -321,6 +330,7 @@ void recommendation(int numGenre, int numVibe, int numActivity)
 
 int main()
 {
+    
     int numGenre, numVibe, numActivity;
 
     cout << "======================================" << endl;
@@ -332,9 +342,11 @@ int main()
     cout << endl;
 
     
+  
     genreMenu();
     cout << "Enter here: ";
     cin >> numGenre;
+
 
     while (numGenre < 1 || numGenre > 3)
     {
@@ -344,7 +356,7 @@ int main()
         cin >> numGenre;
     }
 
-    //Vibe
+
     vibeMenu();
     cout << "Enter here: ";
     cin >> numVibe;
@@ -357,11 +369,11 @@ int main()
         cin >> numVibe;
     }
 
-    // Activity
     activityMenu();
     cout << "Enter here: ";
     cin >> numActivity;
 
+    
     while (numActivity < 1 || numActivity > 3)
     {
         cout << "ERROR: WRONG ACTIVITY NUMBER! Please enter the correct number!" << endl;
@@ -370,7 +382,6 @@ int main()
         cin >> numActivity;
     }
 
-    // Recommendation
     recommendation(numGenre, numVibe, numActivity);
 
     
