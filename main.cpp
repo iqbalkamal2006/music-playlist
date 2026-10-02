@@ -224,7 +224,7 @@ void recommendation(int numGenre, int numVibe, int numActivity)
         cout << "Sing About Me, I'm Dying of Thirst - Kendrick Lamar" << endl;
     }
 
-    
+    //ROCK
     else if (numGenre == 3 && numVibe == 1 && numActivity == 1)
     {
         cout << "Go full ROCK N ROLL for your playlist!"<< endl;
@@ -344,7 +344,7 @@ int main()
         cin >> numGenre;
     }
 
-    
+    //Vibe
     vibeMenu();
     cout << "Enter here: ";
     cin >> numVibe;
