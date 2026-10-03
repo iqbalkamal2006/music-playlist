@@ -41,7 +41,7 @@ void activityMenu()
 // numGenre: 1 = Pop, 2 = Hip Hop, 3 = Rock
 // numVibe: 1 = Chill, 2 = Hype, 3 = Sad
 // numActivity: 1 = Studying, 2 = Walking, 3 = Driving
-void recommendation(int numGenre, int numVibe, int numActivity)
+void recommendation(float numGenre, float numVibe, float numActivity)
 {
     cout << "======================================" << endl;
     cout << "HERE'S YOUR RECOMMENDED SONGS" << endl;
