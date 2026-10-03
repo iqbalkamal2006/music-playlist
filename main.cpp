@@ -139,7 +139,7 @@ void recommendation(float numGenre, float numVibe, float numActivity)
         cout << "Someone Like You - Adele" << endl;
     }
 
-    // Sad Walking Pop    
+    // Sad Driving Pop    
     else if (numGenre == 1 && numVibe == 3 && numActivity == 3)
     {
         cout << "Let's go POPPY with your playlist!" << endl;
@@ -377,9 +377,11 @@ int main()
     cin >> numGenre;
 
 
-    while (numGenre < 1 || numGenre > 3)
+    while (cin.fail() || numGenre < 1 || numGenre > 3 || numGenre != static_cast<int>(numGenre))
     {
-        cout << "ERROR: WRONG GENRE NUMBER! Please enter the correct number!" << endl;
+        cout << "ERROR: INVALID GENRE NUMBER! Please enter the correct number!" << endl;
+        cin.clear();
+        cin.ignore (1000, '\n');
         genreMenu();
         cout << "Enter here: ";
         cin >> numGenre;
@@ -390,9 +392,11 @@ int main()
     cout << "Enter here: ";
     cin >> numVibe;
 
-    while (numVibe < 1 || numVibe > 3)
+    while (cin.fail() || numVibe < 1 || numVibe > 3 || numVibe != static_cast<int>(numVibe))
     {
-        cout << "ERROR: WRONG VIBE NUMBER! Please enter the correct number!" << endl;
+        cout << "ERROR: INVALID VIBE NUMBER! Please enter the correct number!" << endl;
+        cin.clear();
+        cin.ignore (1000, '\n');
         vibeMenu();
         cout << "Enter here: ";
         cin >> numVibe;
@@ -404,9 +408,11 @@ int main()
     cin >> numActivity;
 
     
-    while (numActivity < 1 || numActivity > 3)
+    while (cin.fail() || numActivity < 1 || numActivity > 3 || numVibe != static_cast<int>(numVibe))
     {
-        cout << "ERROR: WRONG ACTIVITY NUMBER! Please enter the correct number!" << endl;
+        cout << "ERROR: INVALID ACTIVITY NUMBER! Please enter the correct number!" << endl;
+        cin.clear();
+        cin.ignore (1000, '\n');
         activityMenu();
         cout << "Enter here: ";
         cin >> numActivity;
